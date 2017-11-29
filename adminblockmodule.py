@@ -62,7 +62,9 @@ class AdminBlockModule(unittest.TestCase):
         wd.find_element_by_id("moduleBlock").click()
         wd.find_element_by_id("moduleBlockReason").click()
         wd.find_element_by_id("moduleBlockReason").clear()
-        wd.find_element_by_id("moduleBlockReason").send_keys("Причина блокировки №123-34213\nС переносом строки\n        И спецсимволами ,Ю/ЭЖЮЪЭ!()*\"%;(?%!!")
+        wd.find_element_by_id("moduleBlockReason").send_keys("Причина блокировки №123-34213\n\
+        С переносом строки\n\
+                И спецсимволами ,Ю/ЭЖЮЪЭ!()*\"%;(?%!!")
         WebDriverWait(wd,2).until(EC.element_to_be_clickable((By.ID,"moduleListaction_saveBtn")))
         # без задержки почему-то не нажимается
         wd.find_element_by_id("moduleListaction_saveBtn").click()
