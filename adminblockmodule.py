@@ -23,24 +23,28 @@ class AdminBlockModule(unittest.TestCase):
     def open_home_page(self, wd):
         wd.get("http://nadzor.comita.lan:8080/watch/")
 
-    def login_admin(self, wd):
+    def login_admin(self, wd, username, password):
+        self.open_home_page(wd)
         wd.find_element_by_id("loginBtn").click()
         wd.find_element_by_id("username").click()
         wd.find_element_by_id("username").clear()
         WebDriverWait(wd, 2).until(EC.presence_of_element_located((By.ID, "username")))
-        wd.find_element_by_id("username").send_keys("admin")
+        wd.find_element_by_id("username").send_keys(username)
         wd.find_element_by_id("password").click()
         wd.find_element_by_id("password").clear()
-        wd.find_element_by_id("password").send_keys("123")
+        wd.find_element_by_id("password").send_keys(password)
         wd.find_element_by_id("loginDlgaction_saveBtn").click()
+
+    def user_properties_open(self, wd):
+        wd.find_element_by_xpath("//*[@id='tab0']/userstable/div[2]/div[2]/table/tbody/tr[1]/td[1]").click()
+        wd.find_element_by_xpath("//div[@id='tab0']/userstable/div[1]/div/div[2]").click()
 
     def test_admin_block_module(self):
         success = True
         wd = self.wd
-        self.open_home_page(wd)
-        self.login_admin(wd)
-        wd.find_element_by_xpath("//*[@id='tab0']/userstable/div[2]/div[2]/table/tbody/tr[1]/td[1]").click()
-        wd.find_element_by_xpath("//div[@id='tab0']/userstable/div[1]/div/div[2]").click()
+        self.login_admin(wd, username="admin", password="123")
+        self.user_properties_open(wd)
+        #open Модули ЗИВС
         wd.find_element_by_xpath("//div[@class='ms-options-wrap']/button").click()
         WebDriverWait(wd,5).until(EC.presence_of_element_located((By.XPATH,"//label[@for='ms-opt-14']")))
         wd.find_element_by_xpath("//label[@for='ms-opt-14']").click()
@@ -49,6 +53,8 @@ class AdminBlockModule(unittest.TestCase):
         wd.find_element_by_id("userListaction_saveBtn").click()
         WebDriverWait(wd,2).until(EC.presence_of_element_located((By.CSS_SELECTOR,".ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only")))
         wd.find_element_by_css_selector(".ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only").click()
+        """
+        #блокирование модуля
         wd.find_element_by_id("modulesBlock").click()
         wd.find_element_by_xpath("//div[@id='tab1']//div[.='САО Схема']").click()
         wd.find_element_by_xpath("//div[@id='tab1']/zivstable/div[1]/div/div[2]").click()
@@ -61,7 +67,7 @@ class AdminBlockModule(unittest.TestCase):
         # без задержки почему-то не нажимается
         wd.find_element_by_id("moduleListaction_saveBtn").click()
         WebDriverWait(wd,2).until(EC.presence_of_element_located((By.CSS_SELECTOR,".ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only")))
-        wd.find_element_by_xpath("//div[@class='ui-dialog-buttonset']//button[.='Закрыть']").click()
+        wd.find_element_by_xpath("//div[@class='ui-dialog-buttonset']//button[.='Закрыть']").click()"""
         self.assertTrue(success)
 
     def tearDown(self):
