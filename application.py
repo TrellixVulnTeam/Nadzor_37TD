@@ -16,14 +16,12 @@ class Application:
         wd = self.wd
         wd.get("http://nadzor.comita.lan:8080/watch/")
 
-    def login_admin(self):
+    def login_admin(self, user_login, password):
         wd = self.wd
         self.open_home_page()
         wd.find_element_by_id("loginBtn").click()
-        #WebDriverWait(wd, 3).until(EC.presence_of_element_located((By.XPATH, ".//*[@id='tab1']/infotable/div/div[2]/table/tbody/tr[1]/td[2]/div")))
-        wd.find_element_by_id("password").send_keys("123")
-        wd.find_element_by_id("username").send_keys("admin")
-        #WebDriverWait(wd, 3).until(EC.text_to_be_present_in_element_value(By.XPATH, '//*[@id="username" and text() = "admin"]'))
+        wd.find_element_by_id("password").send_keys(password)
+        wd.find_element_by_id("username").send_keys(user_login)
         wd.find_element_by_id("loginDlgaction_saveBtn").click()
 
     def user_properties_open(self):

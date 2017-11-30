@@ -11,11 +11,13 @@ def app(request):
 
 
 def test_admin_block_module(app):
-    app.login_admin()
+    app.login_admin("admin", "123")
     app.user_properties_open()
     app.expand_module_zivs()
     app.select_sao321()
     app.save_properties()
+
+
 
 
 """
