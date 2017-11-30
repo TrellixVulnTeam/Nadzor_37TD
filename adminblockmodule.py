@@ -20,39 +20,59 @@ class AdminBlockModule(unittest.TestCase):
         self.wd.maximize_window()
         self.wd.implicitly_wait(2)
 
-    def open_home_page(self, wd):
+    def open_home_page(self):
+        wd = self.wd
         wd.get("http://nadzor.comita.lan:8080/watch/")
 
-    def login_admin(self, wd, username, password):
-        self.open_home_page(wd)
+    def login_admin(self):
+        wd = self.wd
+        self.open_home_page()
         wd.find_element_by_id("loginBtn").click()
-        wd.find_element_by_id("username").click()
-        wd.find_element_by_id("username").clear()
-        WebDriverWait(wd, 2).until(EC.presence_of_element_located((By.ID, "username")))
-        wd.find_element_by_id("username").send_keys(username)
-        wd.find_element_by_id("password").click()
-        wd.find_element_by_id("password").clear()
-        wd.find_element_by_id("password").send_keys(password)
+        WebDriverWait(wd, 3).until(EC.presence_of_element_located((By.XPATH, ".//*[@id='tab1']/infotable/div/div[2]/table/tbody/tr[1]/td[2]/div")))
+        #wd.find_element_by_id("username").click()
+        #wd.find_element_by_id("username").clear()
+        #wd.find_element_by_id("password").click()
+        #wd.find_element_by_id("password").clear()
+        wd.find_element_by_id("password").send_keys("123")
+        wd.find_element_by_id("username").send_keys("admin")
+        #WebDriverWait(wd, 3).until(EC.text_to_be_present_in_element_value(By.XPATH, '//*[@id="username" and text() = "admin"]'))
         wd.find_element_by_id("loginDlgaction_saveBtn").click()
 
-    def user_properties_open(self, wd):
+    def user_properties_open(self):
+        wd = self.wd
         wd.find_element_by_xpath("//*[@id='tab0']/userstable/div[2]/div[2]/table/tbody/tr[1]/td[1]").click()
         wd.find_element_by_xpath("//div[@id='tab0']/userstable/div[1]/div/div[2]").click()
 
-    def test_admin_block_module(self):
-        success = True
+    def expand_module_zivs(self):
         wd = self.wd
-        self.login_admin(wd, username="admin", password="123")
-        self.user_properties_open(wd)
-        #open Модули ЗИВС
+        # expand field Модули ЗИВС
         wd.find_element_by_xpath("//div[@class='ms-options-wrap']/button").click()
-        WebDriverWait(wd,5).until(EC.presence_of_element_located((By.XPATH,"//label[@for='ms-opt-14']")))
+        # wait form loaded
+        WebDriverWait(wd, 5).until(EC.presence_of_element_located((By.XPATH, "//label[@for='ms-opt-14']")))
+
+    def select_sao321(self):
+        wd = self.wd
+        # select САО 321
         wd.find_element_by_xpath("//label[@for='ms-opt-14']").click()
         if wd.find_element_by_id("ms-opt-14").is_selected():
             wd.find_element_by_id("ms-opt-14").click()
+
+    def save_properties(self):
+        wd = self.wd
         wd.find_element_by_id("userListaction_saveBtn").click()
-        WebDriverWait(wd,2).until(EC.presence_of_element_located((By.CSS_SELECTOR,".ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only")))
-        wd.find_element_by_css_selector(".ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only").click()
+        # wait to save
+        WebDriverWait(wd, 2).until(EC.presence_of_element_located(
+            (By.CSS_SELECTOR, ".ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only")))
+        # click close Информация сохранена
+        wd.find_element_by_css_selector(
+            ".ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only").click()
+
+    def test_admin_block_module(self):
+        self.login_admin()
+        self.user_properties_open()
+        self.expand_module_zivs()
+        self.select_sao321()
+        self.save_properties()
         """
         #блокирование модуля
         wd.find_element_by_id("modulesBlock").click()
@@ -68,11 +88,8 @@ class AdminBlockModule(unittest.TestCase):
         wd.find_element_by_id("moduleListaction_saveBtn").click()
         WebDriverWait(wd,2).until(EC.presence_of_element_located((By.CSS_SELECTOR,".ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only")))
         wd.find_element_by_xpath("//div[@class='ui-dialog-buttonset']//button[.='Закрыть']").click()"""
-        self.assertTrue(success)
 
     def tearDown(self):
         self.wd.quit()
 
-if __name__ == '__main__':
-    unittest.main()
 
