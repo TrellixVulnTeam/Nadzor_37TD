@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from fixture.application import Application
+from fixture.user_properties import UserPropertiesHelper
 import pytest
 
 
@@ -12,10 +13,10 @@ def app(request):
 
 def test_admin_block_module(app):
     app.session.login_admin("admin", "123")
-    app.user_properties_open()
-    app.expand_module_zivs()
-    app.select_sao321()
-    app.save_properties()
+    app.user_properties.open()
+    app.user_properties.expand_module_zivs()
+    app.user_properties.select_sao321()
+    app.user_properties.save_properties()
 
 
 
