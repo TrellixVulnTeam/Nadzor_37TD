@@ -11,7 +11,7 @@ def app(request):
 
 
 def test_admin_block_module(app):
-    app.login_admin("admin", "123")
+    app.session.login_admin("admin", "123")
     app.user_properties_open()
     app.expand_module_zivs()
     app.select_sao321()

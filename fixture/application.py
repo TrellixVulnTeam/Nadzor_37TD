@@ -2,6 +2,7 @@ from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from fixture.session import SessionHelper
 __author__ = 'dmitryh'
 
 
@@ -11,18 +12,11 @@ class Application:
         self.wd = WebDriver()
         self.wd.maximize_window()
         self.wd.implicitly_wait(2)
+        self.session = SessionHelper(self)
 
     def open_home_page(self):
         wd = self.wd
         wd.get("http://nadzor.comita.lan:8080/watch/")
-
-    def login_admin(self, user_login, password):
-        wd = self.wd
-        self.open_home_page()
-        wd.find_element_by_id("loginBtn").click()
-        wd.find_element_by_id("password").send_keys(password)
-        wd.find_element_by_id("username").send_keys(user_login)
-        wd.find_element_by_id("loginDlgaction_saveBtn").click()
 
     def user_properties_open(self):
         wd = self.wd

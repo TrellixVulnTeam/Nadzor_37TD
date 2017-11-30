@@ -17,6 +17,7 @@
     <SUITE FILE_PATH="coverage/Nadzor$py_test_in_AdminBlockModule_and_test_admin_block_module.coverage" NAME="py.test in AdminBlockModule and test_admin_block_module Coverage Results" MODIFIED="1511968191270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Nadzor$py_test_in_AdminBlockModule.coverage" NAME="py.test in AdminBlockModule Coverage Results" MODIFIED="1511964289866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Nadzor$py_test_in_adminblockmodule_py.coverage" NAME="py.test in adminblockmodule.py Coverage Results" MODIFIED="1512047309042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Nadzor$py_test_in_adminblockmodule_py__1_.coverage" NAME="py.test in adminblockmodule.py (1) Coverage Results" MODIFIED="1512047898370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Nadzor$py_test_in_Admin_Block.coverage" NAME="py.test in Admin_Block Coverage Results" MODIFIED="1511794585419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Nadzor$Unittests_in_admin_block_module_IDE.coverage" NAME="Unittests in admin_block_module_IDE Coverage Results" MODIFIED="1511959210955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Nadzor$Unittest_AdminBlock_test_block_ZIVS.coverage" NAME="Unittest AdminBlock.test_block_ZIVS Coverage Results" MODIFIED="1511950108662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -40,8 +41,8 @@
       <file leaf-file-name="adminblockmodule.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/adminblockmodule.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1303681" vertical-offset="0" max-vertical-offset="782">
-              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.44325152" vertical-offset="0" max-vertical-offset="782">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding>
                 <element signature="e#24#67#0" expanded="true" />
               </folding>
@@ -49,11 +50,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="session.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fixture/session.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="application.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1139">
-              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1037">
+              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -71,6 +82,9 @@
         <option value="$PROJECT_DIR$/user_helper.py" />
         <option value="$PROJECT_DIR$/application.py" />
         <option value="$PROJECT_DIR$/adminblockmodule.py" />
+        <option value="$PROJECT_DIR$/fixture/application.py" />
+        <option value="$PROJECT_DIR$/fixture/session.py" />
+        <option value="$PROJECT_DIR$/test/adminblockmodule.py" />
       </list>
     </option>
   </component>
@@ -191,36 +205,7 @@
       <recent name="D:\Python\Nadzor\fixture" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.py.test in adminblockmodule.py">
-    <configuration default="false" name="py.test in admin_block_module.py" type="tests" factoryName="py.test" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Nadzor" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="$PROJECT_DIR$/admin_block_module.py" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.py.test in adminblockmodule.py (1)">
     <configuration default="false" name="admin_block_module" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -325,6 +310,33 @@
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="py.test in adminblockmodule.py (1)" type="tests" factoryName="py.test" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Nadzor" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="$PROJECT_DIR$/test/adminblockmodule.py" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -517,19 +529,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in admin_block_module.py" />
-      <item index="1" class="java.lang.String" itemvalue="Python.admin_block_module" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in AdminBlockModule and test_admin_block_module" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in adminblockmodule.py" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in AdminBlockModule" />
+      <item index="0" class="java.lang.String" itemvalue="Python.admin_block_module" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in AdminBlockModule and test_admin_block_module" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in adminblockmodule.py" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in AdminBlockModule" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in adminblockmodule.py (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in adminblockmodule.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in AdminBlockModule and test_admin_block_module" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in AdminBlockModule" />
-        <item index="3" class="java.lang.String" itemvalue="Python.admin_block_module" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in admin_block_module.py" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in adminblockmodule.py (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in adminblockmodule.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in AdminBlockModule and test_admin_block_module" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in AdminBlockModule" />
+        <item index="4" class="java.lang.String" itemvalue="Python.admin_block_module" />
       </list>
     </recent_temporary>
   </component>
@@ -778,16 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/application.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1139">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/user_helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10429448" vertical-offset="0" max-vertical-offset="652">
@@ -796,10 +798,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1037">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/adminblockmodule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1303681" vertical-offset="0" max-vertical-offset="782">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.44325152" vertical-offset="0" max-vertical-offset="782">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding>
             <element signature="e#24#67#0" expanded="true" />
           </folding>
