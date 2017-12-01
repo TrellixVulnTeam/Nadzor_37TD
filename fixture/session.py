@@ -16,3 +16,8 @@ class SessionHelper:
         wd.find_element_by_id("username").send_keys(user_login)
         wd.find_element_by_id("loginDlgaction_saveBtn").click()
 
+    def logout(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//*[@id='tab0']/userstable/div[2]/div[2]/table/tbody/tr[1]/td[1]").click()
+        wd.find_element_by_id("logoutBtn").click()
+        wd.find_element_by_xpath("(//button[@type='button'])[2]").click()

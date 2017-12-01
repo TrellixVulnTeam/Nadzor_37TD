@@ -10,7 +10,7 @@ class UserPropertiesHelper:
     def open(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//*[@id='tab0']/userstable/div[2]/div[2]/table/tbody/tr[1]/td[1]").click()
-        wd.find_element_by_xpath("//div[@id='tab0']/userstable/div[1]/div/div[2]").click()
+        wd.find_element_by_xpath("//div[@class='toolbarBtn cursor-cell editBtn editBtn_active']").click()
 
     def expand_module_zivs(self):
         wd = self.app.wd

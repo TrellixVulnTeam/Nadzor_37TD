@@ -1,13 +1,4 @@
 # -*- coding: utf-8 -*-
-from fixture.application import Application
-import pytest
-
-
-@pytest.fixture
-def app(request):
-    fixture = Application()
-    request.addfinalizer(fixture.destroy)
-    return fixture
 
 
 def test_admin_check_module(app):
@@ -16,6 +7,16 @@ def test_admin_check_module(app):
     app.user_properties.expand_module_zivs()
     app.user_properties.select_module("САО 407")
     app.user_properties.save_properties()
+    app.session.logout()
+
+
+def test_admin_uncheck_module(app):
+    app.session.login_admin("admin", "123")
+    app.user_properties.open()
+    app.user_properties.expand_module_zivs()
+    app.user_properties.deselect_module("САО 407")
+    app.user_properties.save_properties()
+    app.session.logout()
 
 
 
