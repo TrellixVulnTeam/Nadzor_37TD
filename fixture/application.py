@@ -9,7 +9,7 @@ class Application:
     def __init__(self):
         self.wd = WebDriver()
         self.wd.maximize_window()
-        self.wd.implicitly_wait(2)
+        self.wd.implicitly_wait(5)
         self.session = SessionHelper(self)
         self.user_properties = UserPropertiesHelper(self)
 
